@@ -30,6 +30,13 @@ module Mogreet
       response = @client.class.get('/moms/user.uncache', :query => options)
       Hashie::Mash.new(response.parsed_response).response
     end
+    
+    # number
+    # campaign_id
+    def getopt(options)
+      response = @client.class.get('/moms/user.getopt', :query => options)
+      Hashie::Mash.new(response.parsed_response).response      
+    end
 
   end
 end

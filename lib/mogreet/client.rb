@@ -31,5 +31,9 @@ module Mogreet
     def list
       @list ||= List.new(self)
     end
+    
+    def media
+      @media ||= Media.new(self)
+    end
   end
 end
