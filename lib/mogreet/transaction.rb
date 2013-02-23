@@ -14,6 +14,7 @@ module Mogreet
     # callback:     If provided with a valid URL, any errors with the transaction will be sent to this URL via XML over HTTP. See description below.  
     def send(options)
       response = @client.class.get('/moms/transaction.send', :query => options)
+      # issue is that this returns a 'hash' attribute, which conflicts with ruby's hash object.
       Hashie::Mash.new(response.parsed_response).response
     end
   
