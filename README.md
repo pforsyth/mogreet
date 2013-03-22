@@ -3,8 +3,6 @@ Mogreet API
 
 A Ruby wrapper for the Mogreet API.
 
-Examples assume that your credentials are set via config vars (https://devcenter.heroku.com/articles/config-vars). 
-
 ##Installation
 Install the gem by issuing
 
@@ -29,7 +27,7 @@ __Ping__
 __Send MMS to one recipient__
 
     response = client.transaction.send(
-      :campaign_id => ENV['MOGREET_MMS_CAMPAIGN_ID'], 
+      :campaign_id => 987, 
       :to          => '1111111111', 
       :message     => 'hello world', 
       :content_url => 'https://wp-uploads.mogreet.com/wp-uploads/2013/02/API-Beer-sticker-300dpi-1024x1024.jpg'
@@ -38,7 +36,7 @@ __Send MMS to one recipient__
 __Send SMS to one recipient__
 
     response = client.transaction.send(
-      :campaign_id => ENV['MOGREET_SMS_CAMPAIGN_ID'], 
+      :campaign_id => 988, 
       :to          => '1111111111', 
       :message     => 'hello world'
     )
@@ -46,7 +44,7 @@ __Send SMS to one recipient__
 __Send SMS to list of recipients__
     
     response = client.list.send(
-      :campaign_id => ENV['MOGREET_SMS_CAMPAIGN_ID'], 
+      :campaign_id => 988, 
       :message     => 'hello world',
       :list_id     => '8228'
     )
