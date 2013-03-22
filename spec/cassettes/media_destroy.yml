@@ -1,0 +1,61 @@
+--- 
+http_interactions: 
+- request: 
+    method: get
+    uri: https://api.mogreet.com/cm/media.destroy?client_id=1010101&content_id=308685&format=json&token=xyxyxyxyxyxyxyxyxyxyxyxyxyx
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      Accept: 
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding: 
+      - gzip, deflate
+      User-Agent: 
+      - Ruby
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Thu, 21 Mar 2013 22:21:06 GMT
+      Server: 
+      - Apache/2.2.21 (Unix) Phusion_Passenger/3.0.11 mod_ssl/2.2.21 OpenSSL/0.9.8q
+      X-Powered-By: 
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.11
+      X-Ua-Compatible: 
+      - IE=Edge,chrome=1
+      Etag: 
+      - "\"a172862e4f093b6c04092185613abb43\""
+      Cache-Control: 
+      - max-age=0, private, must-revalidate
+      X-Runtime: 
+      - "0.209581"
+      X-Rack-Cache: 
+      - miss
+      Status: 
+      - "200"
+      Content-Length: 
+      - "229"
+      Content-Type: 
+      - application/json; charset=utf-8
+    body: 
+      encoding: US-ASCII
+      string: |
+        {
+            "response": {
+        		"code": "1",
+            		"status": "success",
+        		"message": "media correctly deleted",
+        		"media": {
+        			"name": "upload name",
+        			"content_id": "308685",
+        			"smart_url": "http://m.mogreet.com/oc/em13ti52m"
+        		}
+        	}
+        }
+
+    http_version: 
+  recorded_at: Thu, 21 Mar 2013 22:21:06 GMT
+recorded_with: VCR 2.4.0

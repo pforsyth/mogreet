@@ -1,0 +1,61 @@
+--- 
+http_interactions: 
+- request: 
+    method: get
+    uri: https://api.mogreet.com/cm/list.append?client_id=1010101&format=json&list_id=8228&numbers=3108675309&token=xyxyxyxyxyxyxyxyxyxyxyxyxyx
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      Accept: 
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding: 
+      - gzip, deflate
+      User-Agent: 
+      - Ruby
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Thu, 21 Mar 2013 19:40:37 GMT
+      Server: 
+      - Apache/2.2.21 (Unix) Phusion_Passenger/3.0.11 mod_ssl/2.2.21 OpenSSL/0.9.8q
+      X-Powered-By: 
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.11
+      X-Ua-Compatible: 
+      - IE=Edge,chrome=1
+      Etag: 
+      - "\"f203c0416699279d3e1b17298995d9da\""
+      Cache-Control: 
+      - max-age=0, private, must-revalidate
+      X-Runtime: 
+      - "0.232925"
+      X-Rack-Cache: 
+      - miss
+      Status: 
+      - "200"
+      Content-Length: 
+      - "182"
+      Content-Type: 
+      - application/json; charset=utf-8
+    body: 
+      encoding: US-ASCII
+      string: |
+        {
+            "response": {
+        		"code": "1",
+            		"status": "success",
+        		"message": "request processed",
+        		"statistics": {
+        			"created": "1",
+        			"duplicate": "0",
+        			"rejected": "0"
+        		}
+        	}
+        }
+
+    http_version: 
+  recorded_at: Thu, 21 Mar 2013 19:40:25 GMT
+recorded_with: VCR 2.4.0

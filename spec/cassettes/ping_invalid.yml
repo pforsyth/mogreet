@@ -1,0 +1,51 @@
+--- 
+http_interactions: 
+- request: 
+    method: get
+    uri: https://api.mogreet.com/moms/system.ping?client_id=11111&format=json&token=xxxxxx
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      Accept: 
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding: 
+      - gzip, deflate
+      User-Agent: 
+      - Ruby
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Content-Type: 
+      - text/xml
+      Connection: 
+      - close
+      Server: 
+      - mogreet moms api
+      - pserver
+      Host: 
+      - leffe.mogreet.com:93
+      Content-Length: 
+      - "96"
+      Language: 
+      - en
+      Type: 
+      - text/xml
+      Status: 
+      - OK
+    body: 
+      encoding: US-ASCII
+      string: |
+        {
+        	"response": {
+        		"code": "0",
+        		"status": "error",
+        		"message": "Mogreet: 403 Forbidden"
+        	}
+        }
+
+    http_version: 
+  recorded_at: Sat, 16 Mar 2013 19:41:49 GMT
+recorded_with: VCR 2.4.0
