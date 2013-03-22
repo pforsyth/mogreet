@@ -60,6 +60,10 @@ __Upload File__
       :file => File.new("image.jpg")
     )
 
+## Development
+
+Questions or problems? Please post them on the [issue tracker](https://github.com/pforsyth/mogreet/issues). You can contribute changes by forking the project and submitting a pull request. You can ensure the tests are passing by running `bundle` and `rake`.
+
 ## Contributors
 
 The Mogreet gem was initially created by Andrew Hage and Mateusz Dominiak, but has been turned over to the Mogreet's [Paul Forsyth](http://github.com/pforsyth) to develop and maintain.
