@@ -4,8 +4,7 @@ module Mogreet
       @client = client
     end
     def ping(options = {})
-      response = @client.class.get('/moms/system.ping')
-      Hashie::Mash.new(response.parsed_response).response
+      @client.get_request('/moms/system.ping')      
     end    
   end
 end

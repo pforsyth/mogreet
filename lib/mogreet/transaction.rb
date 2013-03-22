@@ -13,9 +13,8 @@ module Mogreet
     # content_url:  A publicly accessible URL of an image, audio or video. MOMS will automagically ingest the content and deliver it as specified by the campaign flow. (Optional, used for SMS and MMS delivering audio, image or video)
     # callback:     If provided with a valid URL, any errors with the transaction will be sent to this URL via XML over HTTP. See description below.  
     def send(options)
-      response = @client.class.get('/moms/transaction.send', :query => options)
       # issue is that this returns a 'hash' attribute, which conflicts with ruby's hash object.
-      Hashie::Mash.new(response.parsed_response).response
+      @client.get_request('/moms/transaction.send', options)      
     end
   
     # client_id Your  client  id. Log onto  the Campaign  Manager to  access  your  client  id.
@@ -26,8 +25,7 @@ module Mogreet
     # user.transactions method.
     def lookup(options)
       # q6z5e0on
-      response = @client.class.get('/moms/transaction.lookup', :query => options)
-      Hashie::Mash.new(response.parsed_response).response
+      @client.get_request('/moms/transaction.lookup', options)      
     end
   end
 end

@@ -5,19 +5,16 @@ module Mogreet
     end
     
     def list(options ={})
-      response = @client.class.get('/cm/list.list', :query => options)
-      Hashie::Mash.new(response.parsed_response).response
+      @client.get_request('/cm/list.list', options)      
     end
 
     def info(options ={})
-      response = @client.class.get('/cm/list.info', :query => options)
-      Hashie::Mash.new(response.parsed_response).response
+      @client.get_request('/cm/list.info', options)      
     end
 
     # name
     def create(options ={})
-      response = @client.class.get('/cm/list.create', :query => options)
-      Hashie::Mash.new(response.parsed_response).response
+      @client.get_request('/cm/list.create', options)      
     end
 
     # list_id
@@ -25,8 +22,7 @@ module Mogreet
     def append(options ={})
       # TODO clone options?
       options[:numbers] = options[:numbers].join(',') if options[:numbers].is_a?(Array)
-      response = @client.class.get('/cm/list.append', :query => options)
-      Hashie::Mash.new(response.parsed_response).response
+      @client.get_request('/cm/list.append', options)      
     end
 
     # list_id
@@ -34,8 +30,7 @@ module Mogreet
     def prune(options ={})
       # TODO clone options?
       options[:numbers] = options[:numbers].join(',') if options[:numbers].is_a?(Array)
-      response = @client.class.get('/cm/list.prune', :query => options)
-      Hashie::Mash.new(response.parsed_response).response
+      @client.get_request('/cm/list.prune', options)      
     end
 
     # list_id
@@ -47,29 +42,25 @@ module Mogreet
     # to_name
     # from_name
     def send(options)      
-      response = @client.class.get('/cm/list.send', :query => options)
-      Hashie::Mash.new(response.parsed_response).response
+      @client.get_request('/cm/list.send', options)
     end
     
     # list_id
     # format
     def download(options)
-      response = @client.class.get('/cm/list.download', :query => options)
-      Hashie::Mash.new(response.parsed_response).response      
+      @client.get_request('/cm/list.download', options)
     end
 
     # list_id
     # name
     def empty(options)
-      response = @client.class.get('/cm/list.empty', :query => options)
-      Hashie::Mash.new(response.parsed_response).response      
+      @client.get_request('/cm/list.empty', options)
     end
 
     # list_id
     # name
     def destroy(options)
-      response = @client.class.get('/cm/list.destroy', :query => options)
-      Hashie::Mash.new(response.parsed_response).response      
+      @client.get_request('/cm/list.destroy', options)
     end
 
   end

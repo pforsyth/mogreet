@@ -4,8 +4,16 @@ module Mogreet
       @client = client
     end
     def list(options = {})
-      response = @client.class.get('/cm/media.list')
-      Hashie::Mash.new(response.parsed_response).response
+      @client.get_request('/cm/media.list')
     end    
+    
+    def upload(options)
+      @client.post_request('/cm/media.upload', options)
+    end
+
+    def destroy(options)
+      @client.get_request('/cm/media.destroy', options)
+    end
+    
   end
 end

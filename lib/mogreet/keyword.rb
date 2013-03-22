@@ -5,27 +5,23 @@ module Mogreet
     end
 
     def list(options ={})
-      response = @client.class.get('/cm/keyword.list', :query => options)
-      Hashie::Mash.new(response.parsed_response).response
+      @client.get_request('/cm/keyword.list', options)
     end
     
     def check(options)
-      response = @client.class.get('/cm/keyword.check', :query => options)
-      Hashie::Mash.new(response.parsed_response).response      
+      @client.get_request('/cm/keyword.check', options)
     end
     
     # campaign_id
     # keyword
     def add(options)
-      response = @client.class.get('/cm/keyword.add', :query => options)
-      Hashie::Mash.new(response.parsed_response).response            
+      @client.get_request('/cm/keyword.add', options)
     end
     
     # campaign_id
     # keyword
     def remove(options)
-      response = @client.class.get('/cm/keyword.remove', :query => options)
-      Hashie::Mash.new(response.parsed_response).response                  
+      @client.get_request('/cm/keyword.remove', options)
     end
   end
 end
