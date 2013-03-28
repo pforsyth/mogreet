@@ -64,4 +64,4 @@ Questions or problems? Please post them on the [issue tracker](https://github.co
 
 ## Contributors
 
-The Mogreet gem was initially created by Andrew Hage and Mateusz Dominiak, but has been turned over to the Mogreet's [Paul Forsyth](http://github.com/pforsyth) to develop and maintain.
+The Mogreet gem was initially created by Andrew Hage and Mateusz Dominiak. [Paul Forsyth](http://github.com/pforsyth) is the current maintainer.
