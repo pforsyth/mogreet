@@ -4,7 +4,6 @@ require 'json'
 
 module Mogreet
   class Client
-    # include Request
     
     attr_accessor :client_id, :token, :http_response
 
@@ -47,6 +46,10 @@ module Mogreet
 
     def transaction
       @transaction ||= Transaction.new(self)      
+    end
+    
+    def inspect
+      %(<Mogreet::Client @client_id="#{@client_id}", @token="#{@token}">)
     end
 
     private
